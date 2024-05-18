@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings
+        version="3.1"
+        xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence/orm
+          https://jakarta.ee/xml/ns/persistence/orm/orm_3_1.xsd">
+    <entity class="tobyspring.hellospring.order.Order" name="Order" access="FIELD">
+        <table name="orders"/>
+        <attributes>
+            <id name="id">
+                <generated-value strategy="AUTO"/>
+            </id>
+            <basic name="no">
+                <column name="no" length="255"/>
+            </basic>
+            <basic name="total">
+                <column name="total" column-definition="number(38,2)"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
